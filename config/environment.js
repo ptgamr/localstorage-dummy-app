@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'localstorage-dummy-app',
+    podModulePrefix: 'localstorage-dummy-app/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

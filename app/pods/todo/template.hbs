@@ -1,0 +1,21 @@
+<h1>NOT DONE</h1>
+
+<ul>
+  {{#each notDoneTodos as |todo|}}
+    <li>{{todo.title}} {{input type='checkbox' change=(route-action 'toggleDone' todo)}}</li>
+  {{/each}}
+</ul>
+
+{{input value=newTodoTitle enter=(route-action 'addNewTodo' newTodoTitle)}}
+
+<h1>DONE</h1>
+<ul>
+  {{#each doneTodos as |todo|}}
+    <li>{{todo.title}} {{input type='checkbox' checked=todo.isDone change=(route-action 'toggleDone' todo)}}</li>
+  {{/each}}
+</ul>
+
+<button {{action 'addNewTodo' newTodoTitle}}>Add</button>
+
+
+{{outlet}}
